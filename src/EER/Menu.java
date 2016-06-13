@@ -53,6 +53,8 @@ public class Menu {
     public void adultoIdoso(){
         
         double imcReferencia = 24.9;
+        double eutroficos;
+        double tee;
         System.out.println("O IMC de Referência é de: 24,9");
         System.out.println();
         System.out.print("Informe o Peso: ");
@@ -65,9 +67,13 @@ public class Menu {
         double pa = teclado.nextDouble();
         double imc = peso / (altura * altura);
         double pi = imcReferencia * altura * altura;
+        eutroficos = 662 - (9.53 * idade) + pa * (15.91 * peso + 593.6 * altura);
+        tee = 1086 - (10.1 * idade) + pa * (13.7 * peso + 416 * altura);
         System.out.println();
         System.out.printf("O IMC do Paciente é de: %.2f\n", imc);
         System.out.printf("O PI do Paciente é de: %.2f\n", pi);
+        System.out.printf("O EER H Eutróficos do Paciente é de: %.2f\n",eutroficos);
+        System.out.printf("O TEE H Sobr/Obes do Paciente é de: %.2f\n",tee);
         System.out.println();
         
     }
