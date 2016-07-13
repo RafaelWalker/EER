@@ -64,7 +64,5 @@ public class Eer {
         this.imc = imc;
     }
    
-   
-    
     
 }

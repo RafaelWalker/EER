@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Indices idade:
+ Maior igual a 19 = adultos /idosos
+Adolescente 10 as 18 anos
+Crianca: 
  */
 
 package EER;
@@ -12,6 +13,7 @@ import java.io.IOException;
  *
  * @author Rafael Walker
  */
+
 public class Principal {
     public static void main(String[] args) throws IOException {
         Menu menu = new Menu();
@@ -21,3 +23,5 @@ public class Principal {
     
     
 }
+
+
