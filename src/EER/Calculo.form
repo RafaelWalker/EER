@@ -561,25 +561,26 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="lblImc" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTxtRimc" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="lblImc" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTxtRimc" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTxtRpi" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jLabel15" max="32767" attributes="0"/>
+                                          <Component id="jTxtRpi" pref="30" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTxtReer" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jTxtReer" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTxtRtee" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jTxtRtee" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -667,6 +668,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Microsoft Sans Serif" size="18" style="1"/>
                         </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="cc" type="rgb"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="java.awt.TextField" name="jTxtRpi">
@@ -677,6 +681,9 @@
                         <Property name="enabled" type="boolean" value="false"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Microsoft Sans Serif" size="18" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="cc" type="rgb"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -689,6 +696,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Microsoft Sans Serif" size="18" style="1"/>
                         </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="cc" type="rgb"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="java.awt.TextField" name="jTxtRimc">
@@ -700,7 +710,13 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Microsoft Sans Serif" size="18" style="1"/>
                         </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="cc" type="rgb"/>
+                        </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTxtRimcActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="java.awt.Label" name="lblImc">
                       <Properties>

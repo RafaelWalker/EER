@@ -236,18 +236,27 @@ public class Calculo extends javax.swing.JFrame {
         jTxtReer.setBackground(new java.awt.Color(0, 153, 102));
         jTxtReer.setEnabled(false);
         jTxtReer.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jTxtReer.setForeground(new java.awt.Color(204, 0, 0));
 
         jTxtRpi.setBackground(new java.awt.Color(0, 153, 102));
         jTxtRpi.setEnabled(false);
         jTxtRpi.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jTxtRpi.setForeground(new java.awt.Color(204, 0, 0));
 
         jTxtRtee.setBackground(new java.awt.Color(0, 153, 102));
         jTxtRtee.setEnabled(false);
         jTxtRtee.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jTxtRtee.setForeground(new java.awt.Color(204, 0, 0));
 
         jTxtRimc.setBackground(new java.awt.Color(0, 153, 102));
         jTxtRimc.setEnabled(false);
         jTxtRimc.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jTxtRimc.setForeground(new java.awt.Color(204, 0, 0));
+        jTxtRimc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtRimcActionPerformed(evt);
+            }
+        });
 
         lblImc.setVisible(false);
 
@@ -295,22 +304,23 @@ public class Calculo extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel18)
                         .addGap(29, 29, 29)
+                        .addComponent(lblImc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
-                            .addComponent(jTxtRimc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblImc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTxtRimc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15)
-                            .addComponent(jTxtRpi, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTxtRpi, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
-                            .addComponent(jTxtReer, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTxtReer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17)
-                            .addComponent(jTxtRtee, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTxtRtee, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addGap(1, 1, 1)))
@@ -509,14 +519,18 @@ public class Calculo extends javax.swing.JFrame {
             piCalculado = imcRef * altura * altura;
             eutroficos = 662 - (9.53 * idade) + pa * (15.91 * peso + 593.6 * altura);
             tee = 1086 - (10.1 * idade) + pa * (13.7 * peso + 416 * altura);
-            jTxtRimc.setText(String.valueOf(imcCalculado));
-            jTxtRpi.setText(String.valueOf(piCalculado));
-            jTxtReer.setText(String.valueOf(eutroficos));
-            jTxtRtee.setText(String.valueOf(tee));
+            jTxtRimc.setText(String.format("%.2f",imcCalculado));
+            jTxtRpi.setText(String.format("%.2f",piCalculado));
+            jTxtReer.setText(String.format("%.2f" ,eutroficos));
+            jTxtRtee.setText(String.format("%.2f" ,tee));
         }
 
         
     }//GEN-LAST:event_jBCalculaActionPerformed
+
+    private void jTxtRimcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtRimcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtRimcActionPerformed
 
     /**
      * @param args the command line arguments
