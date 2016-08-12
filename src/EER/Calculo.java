@@ -46,7 +46,7 @@ public class Calculo extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jTxtPeso = new javax.swing.JFormattedTextField();
-        jTxtImcref = new javax.swing.JFormattedTextField();
+        jTxtImc = new javax.swing.JFormattedTextField();
         jTxtIdade = new javax.swing.JFormattedTextField();
         jTxtPa = new javax.swing.JFormattedTextField();
         jTxtAltura = new javax.swing.JFormattedTextField();
@@ -128,11 +128,11 @@ public class Calculo extends javax.swing.JFrame {
             }
         });
 
-        jTxtImcref.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 102), 2));
-        jTxtImcref.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jTxtImcref.addActionListener(new java.awt.event.ActionListener() {
+        jTxtImc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 102), 2));
+        jTxtImc.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jTxtImc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtImcrefActionPerformed(evt);
+                jTxtImcActionPerformed(evt);
             }
         });
 
@@ -359,7 +359,7 @@ public class Calculo extends javax.swing.JFrame {
                                                     .addComponent(jTxtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jTxtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jTxtPa, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTxtImcref, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTxtImc, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jTxtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addComponent(jBCalcula, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(90, 90, 90)
@@ -401,7 +401,7 @@ public class Calculo extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel6)
-                                    .addComponent(jTxtImcref, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTxtImc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel5)
@@ -487,9 +487,9 @@ public class Calculo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTxtIdadeActionPerformed
 
-    private void jTxtImcrefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtImcrefActionPerformed
+    private void jTxtImcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtImcActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtImcrefActionPerformed
+    }//GEN-LAST:event_jTxtImcActionPerformed
 
     private void jTxtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPesoActionPerformed
         // TODO add your handling code here:
@@ -499,7 +499,7 @@ public class Calculo extends javax.swing.JFrame {
 
         DecimalFormat df = new DecimalFormat("##.##");
         double pa;
-        double imcRef;
+        double imc;
         double imcCalculado;
         double piCalculado;
         double peso;
@@ -511,18 +511,20 @@ public class Calculo extends javax.swing.JFrame {
         String opcao = jCSelecao.getSelectedItem().toString();
         if (opcao == "Adulto / Idoso (M)") {
             pa =  Double.parseDouble(jTxtPa.getText());
-            imcRef = Double.parseDouble(jTxtImcref.getText());
             peso = Double.parseDouble(jTxtPeso.getText());
             altura = Double.parseDouble(jTxtAltura.getText());
             idade = Integer.parseInt(jTxtIdade.getText());
             imcCalculado = peso / (altura * altura);
-            piCalculado = imcRef * altura * altura;
+            piCalculado = 24.9 * altura * altura;
             eutroficos = 662 - (9.53 * idade) + pa * (15.91 * peso + 593.6 * altura);
             tee = 1086 - (10.1 * idade) + pa * (13.7 * peso + 416 * altura);
+            imc = peso * (altura * altura);
+            
             jTxtRimc.setText(String.format("%.2f",imcCalculado));
             jTxtRpi.setText(String.format("%.2f",piCalculado));
             jTxtReer.setText(String.format("%.2f" ,eutroficos));
             jTxtRtee.setText(String.format("%.2f" ,tee));
+            jTxtImc.setText(String.format("%.2f", imc));
         }
 
         
@@ -601,7 +603,7 @@ public class Calculo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JFormattedTextField jTxtAltura;
     private javax.swing.JFormattedTextField jTxtIdade;
-    private javax.swing.JFormattedTextField jTxtImcref;
+    private javax.swing.JFormattedTextField jTxtImc;
     private javax.swing.JFormattedTextField jTxtPa;
     private javax.swing.JFormattedTextField jTxtPeso;
     private java.awt.TextField jTxtReer;
