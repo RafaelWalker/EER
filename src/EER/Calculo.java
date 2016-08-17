@@ -535,7 +535,7 @@ public class Calculo extends javax.swing.JFrame {
             jTxtImc.setText(String.format("%.2f", imc));
         }
         
-        if (opcao == "Criança") {
+        if (opcao  "Criança") {
             pa =  Double.parseDouble(jTxtPa.getText());
             peso = Double.parseDouble(jTxtPeso.getText());
             altura = Double.parseDouble(jTxtAltura.getText());
@@ -550,7 +550,8 @@ public class Calculo extends javax.swing.JFrame {
             //jTxtRimc.setText(String.format("%.2f",imcCalculado));
             //jTxtRpi.setText(String.format("%.2f",piCalculado));
             jTxtReer.setText(String.format("%.2f" ,eutroficos));
-            //jTxtRtee.setText(String.format("%.2f" ,tee));
+jTxtReer.setEnabled(false);
+//jTxtRtee.setText(String.format("%.2f" ,tee));
             //jTxtImc.setText(String.format("%.2f", imc));
         }
 
