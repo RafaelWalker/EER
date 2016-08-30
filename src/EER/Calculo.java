@@ -94,6 +94,11 @@ public class Calculo extends javax.swing.JFrame {
 
         jCSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Criança", "Adolescente (F)", "Adolescente (M)", "Adulto / Idoso (F)", "Adulto / Idoso (M)", "Gestante", "Nutriz" }));
+        jCSelecao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCSelecaoActionPerformed(evt);
+            }
+        });
 
         jBCalcula.setBackground(new java.awt.Color(0, 153, 102));
         jBCalcula.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
@@ -514,6 +519,8 @@ public class Calculo extends javax.swing.JFrame {
         int idade;
         double eutroficos;
         double tee;
+        
+            
 
         String opcao = jCSelecao.getSelectedItem().toString();
         if (opcao == "Adulto / Idoso (M)") {
@@ -522,6 +529,7 @@ public class Calculo extends javax.swing.JFrame {
             altura = Double.parseDouble(jTxtAltura.getText());
             idade = Integer.parseInt(jTxtIdade.getText());
             imcRef = Double.parseDouble(jTxtImc.getText());
+            
             imcCalculado = peso / (altura * altura);
             piCalculado = imcRef * altura * altura;
             eutroficos = 662 - (9.53 * idade) + pa * (15.91 * peso + 593.6 * altura);
@@ -535,24 +543,35 @@ public class Calculo extends javax.swing.JFrame {
             jTxtImc.setText(String.format("%.2f", imc));
         }
         
-        if (opcao  "Criança") {
+//        if (opcao.equals("Criança")) {
+//            pa =  Double.parseDouble(jTxtPa.getText());
+//            peso = Double.parseDouble(jTxtPeso.getText());
+//            altura = Double.parseDouble(jTxtAltura.getText());
+//            idade = Integer.parseInt(jTxtIdade.getText());
+//            //imcRef = Double.parseDouble(jTxtImc.getText());
+//            jLabel6.setEnabled(false);
+//            jTxtImc.setEnabled(false);
+//            imcCalculado = peso / (altura * altura);
+//            //piCalculado = imcRef * altura * altura;
+//            eutroficos = 88.5 - (61.9 * idade) + pa * (15.91 * peso + 593.6 * altura);
+//            tee = 1086 - (10.1 * idade) + pa * (26.7 * peso + 903 * altura);
+//            imc = peso * (altura * altura);
+//            
+//            //jTxtRimc.setText(String.format("%.2f",imcCalculado));
+//            //jTxtRpi.setText(String.format("%.2f",piCalculado));
+//            jTxtReer.setText(String.format("%.2f" ,eutroficos));
+//jTxtReer.setEnabled(false);
+////jTxtRtee.setText(String.format("%.2f" ,tee));
+//            //jTxtImc.setText(String.format("%.2f", imc));
+//        }
+        
+        if (opcao.equals("Adolescente (F)")) {
             pa =  Double.parseDouble(jTxtPa.getText());
             peso = Double.parseDouble(jTxtPeso.getText());
             altura = Double.parseDouble(jTxtAltura.getText());
             idade = Integer.parseInt(jTxtIdade.getText());
-            //imcRef = Double.parseDouble(jTxtImc.getText());
-            imcCalculado = peso / (altura * altura);
-            piCalculado = imcRef * altura * altura;
-            eutroficos = 88.5 - (61.9 * idade) + pa * (15.91 * peso + 593.6 * altura);
-            tee = 1086 - (10.1 * idade) + pa * (26.7 * peso + 903 * altura);
-            imc = peso * (altura * altura);
-            
-            //jTxtRimc.setText(String.format("%.2f",imcCalculado));
-            //jTxtRpi.setText(String.format("%.2f",piCalculado));
+            eutroficos = 88.5 - (61.9 * idade) + pa * (26.7 * peso + 903 * altura)+ 25;
             jTxtReer.setText(String.format("%.2f" ,eutroficos));
-jTxtReer.setEnabled(false);
-//jTxtRtee.setText(String.format("%.2f" ,tee));
-            //jTxtImc.setText(String.format("%.2f", imc));
         }
 
         
@@ -565,6 +584,22 @@ jTxtReer.setEnabled(false);
     private void jTxtRpiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtRpiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTxtRpiActionPerformed
+
+    private void jCSelecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCSelecaoActionPerformed
+    //jTxtImc.setEnabled(false);  
+    String opcao = jCSelecao.getSelectedItem().toString();
+        if (opcao.equals("Adolescente (F)")) {
+        jTxtImc.setEnabled(false);
+            jLabel6.setEnabled(false);
+            jPanel4.setVisible(false);
+            jTxtRimc.setEnabled(false);
+            jLabel14.setEnabled(false);
+            jTxtRpi.setEnabled(false);
+            jLabel15.setEnabled(false);
+            jTxtRtee.setEnabled(false);
+            jLabel17.setEnabled(false);
+        }
+    }//GEN-LAST:event_jCSelecaoActionPerformed
 
     /**
      * @param args the command line arguments
