@@ -523,7 +523,7 @@ public class Calculo extends javax.swing.JFrame {
             
 
         String opcao = jCSelecao.getSelectedItem().toString();
-        if (opcao == "Adulto / Idoso (M)") {
+        if (opcao.equals("Adulto / Idoso (M)")) {
             pa =  Double.parseDouble(jTxtPa.getText());
             peso = Double.parseDouble(jTxtPeso.getText());
             altura = Double.parseDouble(jTxtAltura.getText());
@@ -534,6 +534,26 @@ public class Calculo extends javax.swing.JFrame {
             piCalculado = imcRef * altura * altura;
             eutroficos = 662 - (9.53 * idade) + pa * (15.91 * peso + 593.6 * altura);
             tee = 1086 - (10.1 * idade) + pa * (13.7 * peso + 416 * altura);
+            imc = peso * (altura * altura);
+            
+            jTxtRimc.setText(String.format("%.2f",imcCalculado));
+            jTxtRpi.setText(String.format("%.2f",piCalculado));
+            jTxtReer.setText(String.format("%.2f" ,eutroficos));
+            jTxtRtee.setText(String.format("%.2f" ,tee));
+            jTxtImc.setText(String.format("%.2f", imc));
+        }
+        
+        if (opcao.equals("Adulto / Idoso (F)")) {
+            pa =  Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+            imcRef = Double.parseDouble(jTxtImc.getText());
+            
+            imcCalculado = peso / (altura * altura);
+            piCalculado = imcRef * altura * altura;
+            eutroficos = 354 - (6.91 * idade) + pa * (9.36 * peso + 726 * altura);
+            tee = 448 - (7.95 * idade) + pa * (11.4 * peso + 619 * altura);
             imc = peso * (altura * altura);
             
             jTxtRimc.setText(String.format("%.2f",imcCalculado));
@@ -573,6 +593,15 @@ public class Calculo extends javax.swing.JFrame {
             eutroficos = 88.5 - (61.9 * idade) + pa * (26.7 * peso + 903 * altura)+ 25;
             jTxtReer.setText(String.format("%.2f" ,eutroficos));
         }
+        
+        if (opcao.equals("Adolescente (M)")) {
+            pa =  Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+            eutroficos = 135.3 - (30.8 * idade) + pa * (10 * peso + 934 * altura)+ 25;
+            jTxtReer.setText(String.format("%.2f" ,eutroficos));
+        }
 
         
     }//GEN-LAST:event_jBCalculaActionPerformed
@@ -588,7 +617,7 @@ public class Calculo extends javax.swing.JFrame {
     private void jCSelecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCSelecaoActionPerformed
     //jTxtImc.setEnabled(false);  
     String opcao = jCSelecao.getSelectedItem().toString();
-        if (opcao.equals("Adolescente (F)")) {
+        if (opcao.equals("Adolescente (F)") || opcao.equals("Adolescente (M)")) {
         jTxtImc.setEnabled(false);
             jLabel6.setEnabled(false);
             jPanel4.setVisible(false);
