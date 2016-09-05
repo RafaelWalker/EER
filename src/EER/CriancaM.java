@@ -6,18 +6,17 @@
 package EER;
 
 import java.text.DecimalFormat;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author rafael
  */
-public class Calculo extends javax.swing.JFrame {
+public class CriancaM extends javax.swing.JFrame {
 
     /**
-     * Creates new form Calculo
+     * Creates new form Crianca
      */
-    public Calculo() {
+    public CriancaM() {
         initComponents();
     }
 
@@ -30,9 +29,6 @@ public class Calculo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        jDialog1 = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -54,34 +50,15 @@ public class Calculo extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jTxtReer = new java.awt.TextField();
-        jTxtRpi = new java.awt.TextField();
-        jTxtRtee = new java.awt.TextField();
-        jTxtRimc = new java.awt.TextField();
         lblImc = new java.awt.Label();
         jLabel20 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jTxtIdade = new javax.swing.JFormattedTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTxtImc = new javax.swing.JFormattedTextField();
-
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,11 +66,13 @@ public class Calculo extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 153, 102));
         jLabel2.setText("Sistema de Cálculo de EER");
 
+        jPanel3.setBackground(new java.awt.Color(0, 204, 255));
+
         jLabel1.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         jLabel1.setText("Selecione o Perfil do Paciente");
 
         jCSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adulto / Idoso (M)", "Adulto / Idoso (F)", "Adolescente (M)", "Adolescente (F)", "Gestante", "Nutriz", "Criança (M)", "Criança (F)" }));
+        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 - 3   Meses", "4 - 6   Meses", "7 - 12 Meses", "13 - 36 Meses" }));
         jCSelecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCSelecaoActionPerformed(evt);
@@ -153,13 +132,13 @@ public class Calculo extends javax.swing.JFrame {
         jLabel3.setText("PA= 1,00 (sedentário)");
 
         jLabel10.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel10.setText("PA= 1,11 (pouco ativo)");
+        jLabel10.setText("PA= 1,13 (pouco ativo)");
 
         jLabel11.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel11.setText("PA= 1,25 (ativo)");
+        jLabel11.setText("PA= 1,26 (ativo)");
 
         jLabel12.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel12.setText("PA= 1,48 (muito ativo)");
+        jLabel12.setText("PA= 1,42 (muito ativo)");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -188,22 +167,13 @@ public class Calculo extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel12)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(153, 153, 153));
 
-        jLabel14.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 22)); // NOI18N
-        jLabel14.setText("O IMC do Paciente é :");
-
-        jLabel15.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 22)); // NOI18N
-        jLabel15.setText("O PI do Paciente é:");
-
         jLabel16.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 22)); // NOI18N
         jLabel16.setText("O EER Eutróficos do Paciente é:");
-
-        jLabel17.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 22)); // NOI18N
-        jLabel17.setText("O TEE Sobr/Obes do Paciente é:");
 
         jLabel18.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 0, 0));
@@ -216,35 +186,10 @@ public class Calculo extends javax.swing.JFrame {
         jLabel22.setForeground(new java.awt.Color(15, 124, 33));
         jLabel22.setText("Mabel Nilson Alves");
 
-        jTxtReer.setBackground(new java.awt.Color(0, 153, 102));
+        jTxtReer.setBackground(new java.awt.Color(0, 204, 255));
         jTxtReer.setEnabled(false);
         jTxtReer.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
         jTxtReer.setForeground(new java.awt.Color(204, 0, 0));
-
-        jTxtRpi.setBackground(new java.awt.Color(0, 153, 102));
-        jTxtRpi.setEnabled(false);
-        jTxtRpi.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jTxtRpi.setForeground(new java.awt.Color(204, 0, 0));
-        jTxtRpi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtRpiActionPerformed(evt);
-            }
-        });
-
-        jTxtRtee.setBackground(new java.awt.Color(0, 153, 102));
-        jTxtRtee.setEnabled(false);
-        jTxtRtee.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jTxtRtee.setForeground(new java.awt.Color(204, 0, 0));
-
-        jTxtRimc.setBackground(new java.awt.Color(0, 153, 102));
-        jTxtRimc.setEnabled(false);
-        jTxtRimc.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jTxtRimc.setForeground(new java.awt.Color(204, 0, 0));
-        jTxtRimc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtRimcActionPerformed(evt);
-            }
-        });
 
         lblImc.setVisible(false);
 
@@ -253,67 +198,45 @@ public class Calculo extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel16)
-                        .addComponent(jLabel14)
-                        .addComponent(jLabel15))
-                    .addComponent(jLabel17))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(397, 397, 397)
                         .addComponent(jLabel18))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTxtReer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                            .addComponent(jTxtRpi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTxtRimc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTxtRtee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(308, 308, 308)
-                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(lblImc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 374, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(432, 432, 432))
+                        .addGap(485, 485, 485)
+                        .addComponent(lblImc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTxtReer, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(195, 195, 195)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(497, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(jLabel18)
+                .addGap(29, 29, 29)
+                .addComponent(lblImc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(29, 29, 29)
-                        .addComponent(lblImc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
-                            .addComponent(jTxtRimc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTxtRpi, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
+                        .addGap(69, 69, 69)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
-                            .addComponent(jTxtReer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(jTxtRtee, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTxtReer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addGap(1, 1, 1)))
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel22)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         jLabel7.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 18)); // NOI18N
@@ -324,17 +247,6 @@ public class Calculo extends javax.swing.JFrame {
         jTxtIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxtIdadeActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 18)); // NOI18N
-        jLabel6.setText("IMC Ref.:");
-
-        jTxtImc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 102), 2));
-        jTxtImc.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jTxtImc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtImcActionPerformed(evt);
             }
         });
 
@@ -349,37 +261,35 @@ public class Calculo extends javax.swing.JFrame {
                         .addComponent(jLabel13)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(184, 184, 184)
+                                .addComponent(jLabel20))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel8)
-                                                    .addComponent(jLabel4)
-                                                    .addComponent(jLabel5)
-                                                    .addComponent(jLabel7)
-                                                    .addComponent(jLabel6))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jTxtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTxtPa, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTxtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTxtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTxtImc, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addComponent(jBCalcula, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(66, 66, 66)
-                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel5)
+                                            .addComponent(jLabel7))
                                         .addGap(18, 18, 18)
-                                        .addComponent(jCSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(115, 115, 115)
-                                .addComponent(jLabel20))
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTxtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTxtPa, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTxtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTxtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jBCalcula, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(66, 66, 66)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -409,10 +319,6 @@ public class Calculo extends javax.swing.JFrame {
                                     .addComponent(jLabel8)
                                     .addComponent(jTxtPa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jTxtImc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(24, 24, 24)
                                 .addComponent(jBCalcula, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
@@ -420,9 +326,9 @@ public class Calculo extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel20)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel13)
                 .addGap(17, 17, 17))
         );
@@ -447,7 +353,7 @@ public class Calculo extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -484,25 +390,10 @@ public class Calculo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTxtAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtAlturaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtAlturaActionPerformed
-
-    private void jTxtPaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtPaActionPerformed
-
-    private void jTxtIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtIdadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtIdadeActionPerformed
-
-    private void jTxtImcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtImcActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtImcActionPerformed
-
-    private void jTxtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPesoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtPesoActionPerformed
+    private void jCSelecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCSelecaoActionPerformed
+        //jTxtImc.setEnabled(false);
+        
+    }//GEN-LAST:event_jCSelecaoActionPerformed
 
     private void jBCalculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCalculaActionPerformed
 
@@ -519,114 +410,36 @@ public class Calculo extends javax.swing.JFrame {
         double tee;
 
         String opcao = jCSelecao.getSelectedItem().toString();
-        if (opcao.equals("Criança (M)")) {
+        if (opcao.equals("0 - 3 Meses")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+
+            eutroficos = (90 * peso - 100) + 175;
+   
+            jTxtReer.setText(String.format("%.2f", eutroficos));
             
         }
+
         
-        if (opcao.equals("Adulto / Idoso (M)")) {
-            pa = Double.parseDouble(jTxtPa.getText());
-            peso = Double.parseDouble(jTxtPeso.getText());
-            altura = Double.parseDouble(jTxtAltura.getText());
-            idade = Integer.parseInt(jTxtIdade.getText());
-            imcRef = Double.parseDouble(jTxtImc.getText());
-
-            imcCalculado = peso / (altura * altura);
-            piCalculado = imcRef * altura * altura;
-            eutroficos = 662 - (9.53 * idade) + pa * (15.91 * peso + 593.6 * altura);
-            tee = 1086 - (10.1 * idade) + pa * (13.7 * peso + 416 * altura);
-            imc = peso * (altura * altura);
-
-            jTxtRimc.setText(String.format("%.2f", imcCalculado));
-            jTxtRpi.setText(String.format("%.2f", piCalculado));
-            jTxtReer.setText(String.format("%.2f", eutroficos));
-            jTxtRtee.setText(String.format("%.2f", tee));
-            jTxtImc.setText(String.format("%.2f", imc));
-        }
-
-        if (opcao.equals("Adulto / Idoso (F)")) {
-            pa = Double.parseDouble(jTxtPa.getText());
-            peso = Double.parseDouble(jTxtPeso.getText());
-            altura = Double.parseDouble(jTxtAltura.getText());
-            idade = Integer.parseInt(jTxtIdade.getText());
-            imcRef = Double.parseDouble(jTxtImc.getText());
-
-            imcCalculado = peso / (altura * altura);
-            piCalculado = imcRef * altura * altura;
-            eutroficos = 354 - (6.91 * idade) + pa * (9.36 * peso + 726 * altura);
-            tee = 448 - (7.95 * idade) + pa * (11.4 * peso + 619 * altura);
-            imc = peso * (altura * altura);
-
-            jTxtRimc.setText(String.format("%.2f", imcCalculado));
-            jTxtRpi.setText(String.format("%.2f", piCalculado));
-            jTxtReer.setText(String.format("%.2f", eutroficos));
-            jTxtRtee.setText(String.format("%.2f", tee));
-            jTxtImc.setText(String.format("%.2f", imc));
-        }
-
-        if (opcao.equals("Adolescente (M)")) {
-            pa = Double.parseDouble(jTxtPa.getText());
-            peso = Double.parseDouble(jTxtPeso.getText());
-            altura = Double.parseDouble(jTxtAltura.getText());
-            idade = Integer.parseInt(jTxtIdade.getText());
-            eutroficos = 135.3 - (30.8 * idade) + pa * (10 * peso + 934 * altura) + 25;
-            jTxtReer.setText(String.format("%.2f", eutroficos));
-        }
-
-        if (opcao.equals("Adolescente (F)")) {
-            pa = Double.parseDouble(jTxtPa.getText());
-            peso = Double.parseDouble(jTxtPeso.getText());
-            altura = Double.parseDouble(jTxtAltura.getText());
-            idade = Integer.parseInt(jTxtIdade.getText());
-            eutroficos = 88.5 - (61.9 * idade) + pa * (26.7 * peso + 903 * altura) + 25;
-            jTxtReer.setText(String.format("%.2f", eutroficos));
-        }
-
-//        if (opcao.equals("Criança")) {
-//            jLabel6.setEnabled(false);
-//            jTxtImc.setEnabled(false);
-//            pa =  Double.parseDouble(jTxtPa.getText());
-//            peso = Double.parseDouble(jTxtPeso.getText());
-//            altura = Double.parseDouble(jTxtAltura.getText());
-//            idade = Integer.parseInt(jTxtIdade.getText());
-//            imcCalculado = peso / (altura * altura);
-//            //piCalculado = imcRef * altura * altura;
-//            eutroficos = 88.5 - (61.9 * idade) + pa * (15.91 * peso + 593.6 * altura);
-//            tee = 1086 - (10.1 * idade) + pa * (26.7 * peso + 903 * altura);
-//            imc = peso * (altura * altura);
-//            
-//            //jTxtRimc.setText(String.format("%.2f",imcCalculado));
-//            //jTxtRpi.setText(String.format("%.2f",piCalculado));
-//            jTxtReer.setText(String.format("%.2f" ,eutroficos));
-//jTxtReer.setEnabled(false);
-////jTxtRtee.setText(String.format("%.2f" ,tee));
-//            //jTxtImc.setText(String.format("%.2f", imc));
-//        }
-
     }//GEN-LAST:event_jBCalculaActionPerformed
 
-    private void jTxtRimcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtRimcActionPerformed
+    private void jTxtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPesoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtRimcActionPerformed
+    }//GEN-LAST:event_jTxtPesoActionPerformed
 
-    private void jTxtRpiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtRpiActionPerformed
+    private void jTxtPaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtRpiActionPerformed
+    }//GEN-LAST:event_jTxtPaActionPerformed
 
-    private void jCSelecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCSelecaoActionPerformed
-        //jTxtImc.setEnabled(false);  
-        String opcao = jCSelecao.getSelectedItem().toString();
-        if (opcao.equals("Adolescente (F)") || opcao.equals("Adolescente (M)")) {
-            jTxtImc.setEnabled(false);
-            jLabel6.setEnabled(false);
-            jPanel4.setVisible(false);
-            jTxtRimc.setEnabled(false);
-            jLabel14.setEnabled(false);
-            jTxtRpi.setEnabled(false);
-            jLabel15.setEnabled(false);
-            jTxtRtee.setEnabled(false);
-            jLabel17.setEnabled(false);
-        }
-    }//GEN-LAST:event_jCSelecaoActionPerformed
+    private void jTxtAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtAlturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtAlturaActionPerformed
+
+    private void jTxtIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtIdadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtIdadeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -645,39 +458,34 @@ public class Calculo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Calculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CriancaM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Calculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CriancaM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Calculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CriancaM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Calculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CriancaM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Calculo().setVisible(true);
+                new CriancaM().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jBCalcula;
     private javax.swing.JComboBox<String> jCSelecao;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -686,7 +494,6 @@ public class Calculo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -697,13 +504,9 @@ public class Calculo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JFormattedTextField jTxtAltura;
     private javax.swing.JFormattedTextField jTxtIdade;
-    private javax.swing.JFormattedTextField jTxtImc;
     private javax.swing.JFormattedTextField jTxtPa;
     private javax.swing.JFormattedTextField jTxtPeso;
     private java.awt.TextField jTxtReer;
-    private java.awt.TextField jTxtRimc;
-    private java.awt.TextField jTxtRpi;
-    private java.awt.TextField jTxtRtee;
     private java.awt.Label lblImc;
     // End of variables declaration//GEN-END:variables
 }
