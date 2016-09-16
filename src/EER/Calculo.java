@@ -93,7 +93,7 @@ public class Calculo extends javax.swing.JFrame {
         jLabel1.setText("Selecione o Perfil do Paciente");
 
         jCSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adulto / Idoso (M)", "Adulto / Idoso (F)", "Adolescente (M)", "Adolescente (F)", "Gestante", "Nutriz", "Criança (M)", "Criança (F)" }));
+        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adulto / Idoso (M)", "Adulto / Idoso (F)", "Adolescente (M)", "Adolescente (F)", "Gestante", "Nutriz", "Criança", " " }));
         jCSelecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCSelecaoActionPerformed(evt);
@@ -519,9 +519,6 @@ public class Calculo extends javax.swing.JFrame {
         double tee;
 
         String opcao = jCSelecao.getSelectedItem().toString();
-        if (opcao.equals("Criança (M)")) {
-            
-        }
         
         if (opcao.equals("Adulto / Idoso (M)")) {
             pa = Double.parseDouble(jTxtPa.getText());
@@ -625,6 +622,11 @@ public class Calculo extends javax.swing.JFrame {
             jLabel15.setEnabled(false);
             jTxtRtee.setEnabled(false);
             jLabel17.setEnabled(false);
+        }
+        
+        if (opcao.equals("Criança")) {
+            CriancaM crianca = new CriancaM();
+            crianca.setVisible(true);
         }
     }//GEN-LAST:event_jCSelecaoActionPerformed
 

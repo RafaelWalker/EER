@@ -264,8 +264,8 @@
                         <StringItem index="3" value="Adolescente (F)"/>
                         <StringItem index="4" value="Gestante"/>
                         <StringItem index="5" value="Nutriz"/>
-                        <StringItem index="6" value="Crian&#xe7;a (M)"/>
-                        <StringItem index="7" value="Crian&#xe7;a (F)"/>
+                        <StringItem index="6" value="Crian&#xe7;a"/>
+                        <StringItem index="7" value=" "/>
                       </StringArray>
                     </Property>
                   </Properties>
