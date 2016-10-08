@@ -93,7 +93,7 @@ public class Calculo extends javax.swing.JFrame {
         jLabel1.setText("Selecione o Perfil do Paciente");
 
         jCSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adulto / Idoso (M)", "Adulto / Idoso (F)", "Adolescente (M)", "Adolescente (F)", "Gestante", "Nutriz", "Criança", " " }));
+        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adulto / Idoso (M)", "Adulto / Idoso (F)", "Adolescente (M)", "Adolescente (F)", "Gestante", "Nutriz", "Criança" }));
         jCSelecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCSelecaoActionPerformed(evt);
@@ -577,27 +577,17 @@ public class Calculo extends javax.swing.JFrame {
             eutroficos = 88.5 - (61.9 * idade) + pa * (26.7 * peso + 903 * altura) + 25;
             jTxtReer.setText(String.format("%.2f", eutroficos));
         }
+        
+        if (opcao.equals("Gestante")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+            eutroficos = 88.5 - (61.9 * idade) + pa * (26.7 * peso + 903 * altura) + 25;
+            jTxtReer.setText(String.format("%.2f", eutroficos));
+        }
 
-//        if (opcao.equals("Criança")) {
-//            jLabel6.setEnabled(false);
-//            jTxtImc.setEnabled(false);
-//            pa =  Double.parseDouble(jTxtPa.getText());
-//            peso = Double.parseDouble(jTxtPeso.getText());
-//            altura = Double.parseDouble(jTxtAltura.getText());
-//            idade = Integer.parseInt(jTxtIdade.getText());
-//            imcCalculado = peso / (altura * altura);
-//            //piCalculado = imcRef * altura * altura;
-//            eutroficos = 88.5 - (61.9 * idade) + pa * (15.91 * peso + 593.6 * altura);
-//            tee = 1086 - (10.1 * idade) + pa * (26.7 * peso + 903 * altura);
-//            imc = peso * (altura * altura);
-//            
-//            //jTxtRimc.setText(String.format("%.2f",imcCalculado));
-//            //jTxtRpi.setText(String.format("%.2f",piCalculado));
-//            jTxtReer.setText(String.format("%.2f" ,eutroficos));
-//jTxtReer.setEnabled(false);
-////jTxtRtee.setText(String.format("%.2f" ,tee));
-//            //jTxtImc.setText(String.format("%.2f", imc));
-//        }
+
 
     }//GEN-LAST:event_jBCalculaActionPerformed
 

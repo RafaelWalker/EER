@@ -257,7 +257,7 @@
                       <Font name="Arial" size="16" style="0"/>
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="8">
+                      <StringArray count="7">
                         <StringItem index="0" value="Adulto / Idoso (M)"/>
                         <StringItem index="1" value="Adulto / Idoso (F)"/>
                         <StringItem index="2" value="Adolescente (M)"/>
@@ -265,7 +265,6 @@
                         <StringItem index="4" value="Gestante"/>
                         <StringItem index="5" value="Nutriz"/>
                         <StringItem index="6" value="Crian&#xe7;a"/>
-                        <StringItem index="7" value=" "/>
                       </StringArray>
                     </Property>
                   </Properties>

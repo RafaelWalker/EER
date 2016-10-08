@@ -66,13 +66,11 @@ public class CriancaM extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 153, 102));
         jLabel2.setText("Sistema de Cálculo de EER");
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 255));
-
         jLabel1.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         jLabel1.setText("Selecione o Perfil do Paciente");
 
         jCSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 - 3   Meses", "4 - 6   Meses", "7 - 12 Meses", "13 - 36 Meses" }));
+        jCSelecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 - 3   Meses", "4 - 6   Meses", "7 - 12 Meses", "13 - 36 Meses", "3 - 8 Anos (M)", "3 - 8 Anos (F)" }));
         jCSelecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCSelecaoActionPerformed(evt);
@@ -186,7 +184,7 @@ public class CriancaM extends javax.swing.JFrame {
         jLabel22.setForeground(new java.awt.Color(15, 124, 33));
         jLabel22.setText("Mabel Nilson Alves");
 
-        jTxtReer.setBackground(new java.awt.Color(0, 204, 255));
+        jTxtReer.setBackground(new java.awt.Color(238, 238, 238));
         jTxtReer.setEnabled(false);
         jTxtReer.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
         jTxtReer.setForeground(new java.awt.Color(204, 0, 0));
@@ -421,8 +419,66 @@ public class CriancaM extends javax.swing.JFrame {
             jTxtReer.setText(String.format("%.2f", eutroficos));
             
         }
-
         
+        if (opcao.equals("4 - 6 Meses")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+
+            eutroficos = (89 * peso - 100) + 56;
+   
+            jTxtReer.setText(String.format("%.2f", eutroficos));
+
+        }
+        
+        if (opcao.equals("7 - 12 Meses")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+
+            eutroficos = (89 * peso - 100) + 22;
+   
+            jTxtReer.setText(String.format("%.2f", eutroficos));
+
+        }
+        
+        if (opcao.equals("13 - 36 Meses")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+
+            eutroficos = (89 * peso - 100) + 20;
+   
+            jTxtReer.setText(String.format("%.2f", eutroficos));
+
+        }
+        
+        if (opcao.equals("3 - 8 Anos (M)")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+
+            eutroficos = 88.5 - (61.9 * idade) + pa * (26.7 * peso + 903 * altura) + 20;
+   
+            jTxtReer.setText(String.format("%.2f", eutroficos));
+            
+        }
+        
+        if (opcao.equals("3 - 8 Anos (F)")) {
+            pa = Double.parseDouble(jTxtPa.getText());
+            peso = Double.parseDouble(jTxtPeso.getText());
+            altura = Double.parseDouble(jTxtAltura.getText());
+            idade = Integer.parseInt(jTxtIdade.getText());
+
+            eutroficos = 135.3 - (30.8 * idade) + pa * (10 * peso + 934 * altura) + 20;
+   
+            jTxtReer.setText(String.format("%.2f", eutroficos));
+            
+        }
     }//GEN-LAST:event_jBCalculaActionPerformed
 
     private void jTxtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPesoActionPerformed
