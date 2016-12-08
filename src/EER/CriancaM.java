@@ -9,7 +9,7 @@ import java.text.DecimalFormat;
 
 /**
  *
- * @author rafael
+ * @author rafael walker
  */
 public class CriancaM extends javax.swing.JFrame {
 
